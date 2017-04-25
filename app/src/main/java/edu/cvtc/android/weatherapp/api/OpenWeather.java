@@ -15,14 +15,14 @@ import java.util.Map;
 public class OpenWeather {
 
     private static final String URL = "http://api.openweathermap.org/data/2.5/weather";
-    private static final String APP_ID = "a13ad27bb93bad8492322d46f328666e";
+    private static final String APP_ID = "0797e2eb55198922a303176275028857";
 
-    public static List<Map<String, String>> retrieveWeather(final String zipCode) {
+    public static List<Map<String, String>> retrieveWeather(final String cityID) {
 
         final List<Map<String, String>> data = new ArrayList<>();
 
         // Build URL
-        final String requestURL = createRequestURL(zipCode);
+        final String requestURL = createRequestURL(cityID);
 
         // Send API Request
         try {
